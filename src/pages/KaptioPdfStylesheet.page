@@ -1,0 +1,481 @@
+<!--
+Name:  KaptioPdfStylesheet.page
+Copyright © 2018 Kaptio ehf.
+-->
+<apex:page contentType="text/css">
+
+    body {
+        background: #fff;
+        color: #33373b;
+        padding: 0;
+        margin: 0;
+        font-family:  Arial, Helvetica, sans-serif !important;
+        font-size: 14px;
+        line-height:1.3;
+        font-weight: normal;
+        cursor: default;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: inherit;
+        font-weight: 300;
+        line-height: 1.1;
+        text-rendering: optimizelegibility
+    }
+
+    div.footer {
+            display: block;
+            padding: 5px;
+            position: running(footer);
+            font-size:7pt;
+        }
+        
+        .nav.nav-tabs {
+            display: none;
+        }
+        
+        .banner {
+            width: 100%;
+        }
+        .kt-content-block-summary {
+            margin-top: 10px;
+        }
+        .contentOutput .video-images-gallery{ display: inherit; width: 100%;}
+        div .ps-gallery-image-item img, div .item-image img, .video-images-gallery img {
+            max-width: 240px;
+            width: 230px !important;
+        }
+        
+        
+        .title-header h1 {
+            font-size: 30px;
+            padding-top: 50px;
+            text-align: center;
+        }           
+        
+        .header .profile ul li strong {
+            width: 71px;
+            display: inline-block;
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        
+        table.section-info__list td {
+            vertical-align: top;
+        }
+        
+        .noLink a {
+            color: inherit;
+            text-decoration: inherit;
+            cursor: text;
+            pointer-events: none;
+        }
+
+    .header{ padding-bottom: 0px; overflow: hidden;margin-bottom: 25px; margin-top: 15px;}
+    .header .brand{ float: left;}
+    .header .brand img {
+        width: 110px;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    .header .profile{ float: right;font-size: 10pt; color: #444; margin-top: 10px; }
+    .header .profile ul{
+        margin-left: 0;
+        list-style: none;
+        margin-bottom: 0;
+    }
+    .header .profile ul li{margin-bottom: 0; line-height: 1.3em;}
+    .header .profile ul li strong{
+        width: 71px;
+        display: inline-block;
+        margin-right: 5px;
+        font-weight: bold;
+    }
+    
+    .banner {
+        width: 100%;
+    }
+
+    .title-header h1 {
+        font-size: 30px;
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .kt-heading h2 {
+        margin-top: 5px !important;
+    }
+
+    .contentOutput{page-break-before: always;}
+
+    .contentOutput .item-content-html-truncated{display: none;}
+    .contentOutput .block-output .item-block-title{ page-break-before: always; }
+    .contentOutput ul{ margin-left:0; padding-left:0;}
+    .contentOutput li{
+        margin-left:0px;
+        padding-left:15px;
+    }
+
+    .contentOutput table{
+        width:100%;
+        margin-bottom: 20px;
+        background: none;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+
+
+    .contentOutput table > thead:first-child > tr > th{
+        padding: 8px;
+        line-height: 1.42857143;
+        text-align: left;
+        vertical-align: bottom;
+        border-bottom: 2px solid #DDD;
+        background: none;
+    }
+
+    .contentOutput table > tbody > tr > td{
+        border: 1px solid #DDD;
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+    }
+
+    .contentOutput table.table-condensed>tbody>tr>td,
+    .contentOutput table.table-condensed>tbody>tr>th,
+    .contentOutput table.table-condensed>tfoot>tr>td,
+    .contentOutput table.table-condensed>tfoot>tr>th,
+    .contentOutput table.table-condensed>thead>tr>td,
+    .contentOutput table.table-condensed>thead>tr>th{ padding:5px;}
+
+    .contentOutput .item-block-actions,
+    .contentOutput .video-images-gallery{ display: none; content:''; }
+
+    .contentOutput .item-block-booking-summary{ display: inline-block; }
+
+    .contentOutput .panel{
+        display: none;
+        margin-bottom: 20px;
+        background-color: #FFF;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
+    .contentOutput .panel-body{ padding: 15px; }
+
+    .contentOutput p{margin:0 0 10px;}
+
+    .contentOutput .item-location{margin-bottom: 5px; display: none;}
+
+    .contentOutput .featured-image a{
+        height: 300px;
+    display: inline-block;
+    width: 100%;
+    border: 0;
+    color:#fff !important;
+    }
+    .contentOutput .featured-image img{height:100%;width: auto;border:0; display: inline-block;border-color:none;}
+    .contentOutput table.table-noborder{border:none;}
+    .contentOutput table.table-noborder > thead > tr > td,
+    .contentOutput table.table-noborder > tbody > tr > td{
+        border:none;
+        padding: 2px 8px;
+    }
+    .contentOutput table.table-noborder > thead > tr > td h2{
+        margin-bottom: 10px;
+    }
+
+    .ns-bootstrap .table > tbody > tr > th,
+    .ns-bootstrap .table > tbody > tr > td{
+        border: 0 none;
+        border-bottom: 1px solid #dddddd;
+    }
+    .ns-bootstrap .table > tbody > tr.optional-true{
+        background: #F4F6F9;
+        font-style: italic;
+    }
+    .ns-bootstrap .table {
+        background-color: transparent;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #333333;
+    }
+    .ns-bootstrap .col-6 {
+        width: 50%;
+    }
+    .ns-bootstrap .col-5 {
+        width: 41.66666667%;
+    }
+    .ns-bootstrap .col-4 {
+        width: 33.33333333%;
+    }
+    .ns-bootstrap .col-3 {
+        width: 25%;
+    }
+    .ns-bootstrap .col-2 {
+        width: 16.66666667%
+    }
+    .ns-bootstrap .center {
+        text-align: center;
+    }
+    .ns-bootstrap .right {
+        text-align: right;
+    }
+    .ns-bootstrap .block-output .item-block-title{
+        page-break-after: avoid;
+        page-break-before: avoid;
+    }
+    .ns-bootstrap .block-output.kt-item{
+        page-break-after:auto;
+        page-break-inside:avoid;
+    }
+    .ns-bootstrap .block-output.kt-item:last-of-type {
+        page-break-after:avoid;
+    }
+    .kt-page-break-before{
+        page-break-before:always;
+    }
+    .kt-page-break-after{
+        page-break-after:always;
+    }
+
+    table {
+        width: 100%; 
+        border-spacing: 0;          /* if it would be removed align of "Date(s)" will be wrong */
+        border-collapse: collapse;  /* if it would be removed align of "Date(s)" will be wrong */
+    }
+
+    .1-column {
+        width: 15%;
+        color: red;
+    }
+
+    .2-column {
+        width: 50%;
+    }
+
+    .3-column {
+        width: 15%;
+    }
+
+    .4-column {
+        width: 20%;
+    }
+
+    .tab-pane {
+        page-break-before: always;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .ps-gallery-header {
+        width: 740px;
+    }
+
+    .video-images-gallery,
+    .ps-images-list {
+        text-align: center;
+        width: 100%;
+    }
+
+    .ps-lightgallery,
+    .ps-images-list {
+        display: flex;
+        width: 100%;
+    }
+
+    .ps-gallery-image-item,
+    .item-image {
+        display: inline;
+
+        height: auto;
+        width: 100%;
+    }
+
+    .ps-gallery-image-item img,
+    .item-image img {
+        width: 240px;
+    }
+
+    .kt-content-dates-label {
+        display: inline;
+    }
+
+    .kt-content-dates-value {
+        display: inline;
+        float: right;
+        color: #808080;
+    }
+
+    .kt-heading h1,
+    .seeAllGallery,
+    .ps-gallery-img.c-hidden {
+        display: none;
+    }
+
+    div[id*="tab"] .block-output.kt-heading {
+        display: none;
+    }
+    
+    div[id*="tab"] .article-item__discr-img {
+    display: inline-block;
+        width: 220px;
+        vertical-align: top;
+    }
+
+    div[id*="tab"] .article-item__body {
+        display: inline-block;
+        width: 480px;
+    }
+
+    div[id*="tab"] .article-item__body {
+        padding-left: 0px;
+    }
+
+    div[id*="tab"] .article-item__discr-img img {
+        width: 200px !important;
+    }
+
+   .kt-tab-header h2,
+    div[id*="tab"] h1,
+    {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 28px;
+    }
+
+    a {
+        font-size: 14px;
+        color: #337ab7;
+    }
+
+    h1, h2, h3, h4,
+    .kt-agenda-day-header,
+    .item-block-subtitle,
+    .kt-item-header,
+    .item-block-title,
+    .kt-content-block-summary,
+    .kt-content-dates {
+        page-break-after: avoid;
+    }
+
+    .video-images-gallery {
+        display: block;
+    }
+
+    tbody tr,
+    .kt-item-header,
+    .item-block-subtitle,
+    .item-block-title,
+    .kt-content-block-summary,
+    .kt-content-dates,
+    .kt-agenda-day-header {
+        page-break-inside: avoid;
+    }
+
+    tbody tr td {
+        white-space: pre-line;
+        overflow: hidden;
+    }
+
+    thead tr th {
+        font-weight: bold !important;
+        font-size: 17px !important;
+    } 
+
+    .contentOutput t
+     tr td {
+        border-bottom: 1px solid #dddddd !important;
+    }
+
+    .bold {
+        font-weight: bold !important;
+    }
+
+    strong, b {
+        font-weight: bold !important;
+    }
+
+    .kt-content-location {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .kt-content-location div {
+        display: inline;
+    }
+    
+    .kt-content-form.kt-content-dates {
+        margin-bottom: 7mm;
+    }
+
+     /* DO NOT REMOVE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Fix for non unicode langs=================================*/
+    span.ktRichTextOutput span {
+        font-size: 13px !important;
+        font-family: 'museo-sans', sans-serif, 'Arial Unicode MS' !important;
+        font-weight: 300 !important;
+    }
+    
+    body.body, .contentOutput h1, .contentOutput h2, .contentOutput h3, .contentOutput h4, .contentOutput h5, .contentOutput h6,
+        .contentOutput .ktexternal .ns-bootstrap, .contentOutput .section-info__list dt, .contentOutput .ktpdf .table, 
+        .contentOutput span.ktRichTextOutput, .contentOutput p, .contentOutput .block-output.kt-html, 
+        .contentOutput .block-output.kt-list, .block-output.kt-text{
+        font-family: 'Arial Unicode MS' !important;
+    }
+    /* ================================================================================================================*/
+
+
+    @page {
+        size: A4;
+        padding-bottom: 10px;
+        padding-top: 20px;
+
+        @top-left{
+            content: " ";
+            font-family:Arial, Helvetica, sans-serif;
+            border-bottom: 1px solid #000;
+            font-size: 8pt;
+            font-weight: bold;
+            color: #666666;
+        }
+
+        @top-right{
+            content: " ";
+            font-family:Arial, Helvetica, sans-serif;
+            border-bottom: 1px solid #000;
+            font-size: 5pt;
+            font-weight: bold;
+            color: #666666;
+            width: 100%
+        }
+
+        @bottom-left{
+            content: element(footer);
+            font-family:Arial, Helvetica, sans-serif;
+            border-top: 1px solid #000;
+            font-size: 10px;
+            color: #77787b;
+            font-weight: bold;
+        }
+
+        @bottom-right{
+            content: counter(page);
+            font-family:Arial, Helvetica, sans-serif;
+            border-top: 1px solid #000;
+            font-size: 8pt;
+            color: #404041;
+            font-weight: bold;
+        }
+    }
+
+
+}
+</apex:page>

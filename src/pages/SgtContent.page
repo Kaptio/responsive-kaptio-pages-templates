@@ -1,0 +1,108 @@
+<!--
+Name:  ExampleContent.page
+Copyright © 2018 Kaptio ehf.
+-->
+<apex:page controller="KaptioTemplateController" standardStylesheets="false" showHeader="false" sidebar="false">
+
+    <style>
+        .output-resources-ns .banner-container {
+            background-image: url('{!IF(NOT(ISNULL(output.content.KaptioTravel__BannerImage__c)), output.content.KaptioTravel__BannerImage__r.KaptioTravel__S3_Url__c, 'http://kaptio.com/wp-content/uploads/2015/09/masterslide3.jpg')}');
+        }
+    </style>
+    
+    <apex:composition template="KaptioTemplate">
+        <apex:define name="Content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="banner-container"></div>
+                </div>
+            </div>
+            <section class="pt pb-medium">
+                <div class="container">
+                    <div class="row">
+                        <section class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <KaptioTravel:CustomerOutput content="{!output}" />
+                                </div>
+                            </div>
+                        </section>
+                        <aside id="sidebar-right" class="col-md-3 sticky-sidebar">
+                            <section class="widget">
+                                <h3>Booking Summary</h3>
+                                <div style="border-bottom: 1px solid black; height: 2px;"></div>
+                                <div class="sidebar-menu">
+                                    <div class="summary-block">
+                                        <strong>Starts</strong>
+                                        <span class="pull-right">
+                                            <apex:outputText value="{0,date,EEE d MMM YYYY}">
+                                                <apex:param value="{!output.itinerary.KaptioTravel__Start_Date__c}" />
+                                            </apex:outputText>
+                                        </span>
+                                    </div>
+                                    <div class="summary-block">
+                                        <strong>Ends</strong>
+                                        <span class="pull-right">
+                                            <apex:outputText value="{0,date,EEE d MMM YYYY}">
+                                                <apex:param value="{!output.itinerary.KaptioTravel__End_Date__c}" />
+                                            </apex:outputText>
+                                        </span>
+                                    </div>
+                                    <apex:repeat value="{!output.itineraryGuestGroups}" var="g" rendered="{!output.itineraryGuestGroups.size > 0 && output.itineraryGuestGroups[0].Id != NULL}" >
+                                        <apex:outputPanel layout="block" styleClass="summary-block" rendered="{!g.KaptioTravel__StartDate__c != NULL}">
+                                            <h4><apex:outputText value="{!g.Name}"/></h4>
+                                            <apex:outputPanel layout="none" rendered="{!AND(g.KaptioTravel__NoOfNights__c != NULL, g.KaptioTravel__NoOfNights__c != 0)}">
+                                                <b><apex:outputText value="{!$ObjectType.KaptioTravel__ItineraryGroup__c.fields.KaptioTravel__NoOfNights__c.Label}" /></b>
+                                                <span class="pull-right">
+                                                    <apex:outputText value="{!g.KaptioTravel__NoOfNights__c}"/>
+                                                </span><br/>
+                                            </apex:outputPanel>
+                                            <b><apex:outputText value="{!$ObjectType.KaptioTravel__ItineraryGroup__c.fields.KaptioTravel__StartDate__c.Label}" /></b>
+                                            <span class="pull-right">
+                                                <apex:outputText value="{0, date, {!IF(output.channel.KaptioTravel__DateFormat__c != NULL, output.channel.KaptioTravel__DateFormat__c, 'EEE d MMM YYYY')}}">
+                                                    <apex:param value="{!g.KaptioTravel__StartDate__c}" />
+                                                </apex:outputText>
+                                            </span><br/>
+                                            <b><apex:outputText value="{!$ObjectType.KaptioTravel__ItineraryGroup__c.fields.KaptioTravel__EndDate__c.Label}" /></b>
+                                            <span class="pull-right">
+                                                <apex:outputText value="{0, date, {!IF(output.channel.KaptioTravel__DateFormat__c != NULL, output.channel.KaptioTravel__DateFormat__c, 'EEE d MMM YYYY')}}">
+                                                    <apex:param value="{!g.KaptioTravel__EndDate__c}" />
+                                                </apex:outputText>
+                                            </span><br/>
+                                            <b><apex:outputText value="{!$ObjectType.KaptioTravel__ItineraryGroup__c.fields.KaptioTravel__AmountPerPerson__c.Label}" /></b>
+                                            <span class="pull-right">
+                                                <apex:outputText value="{!output.itinerary.CurrencyIsoCode} {0,number, {!output.itineraryCurrencyFormat}}">
+                                                    <apex:param value="{!g.KaptioTravel__AmountPerPerson__c}" />
+                                                </apex:outputText>
+                                            </span><br/>
+                                            <b><apex:outputText value="{!$ObjectType.KaptioTravel__ItineraryGroup__c.fields.KaptioTravel__TotalPerGroup__c.Label}" /></b>
+                                            <span class="pull-right">
+                                                <apex:outputText value="{!output.itinerary.CurrencyIsoCode} {0,number, {!output.itineraryCurrencyFormat}}">
+                                                    <apex:param value="{!g.KaptioTravel__TotalPerGroup__c}" />
+                                                </apex:outputText>
+                                            </span><br/>
+                                        </apex:outputPanel>
+                                    </apex:repeat>
+                                    <div class="summary-block">
+                                        <span class="pull-right">
+                                            <apex:outputText value="{!output.itinerary.CurrencyIsoCode} {0,number, {!output.itineraryCurrencyFormat}}">
+                                                <apex:param value="{!output.itinerary.KaptioTravel__Itinerary_Amount__c}" />
+                                            </apex:outputText>
+                                        </span>
+                                    </div>
+                                </div>
+                            </section>
+                            <div style="height: 20px;"> </div>
+                            <div style="height: 20px; border-bottom: 1px solid black;"></div>
+                            <section class="widget mt">
+                                <h3>Booking Actions</h3>
+                                <div style="height: 2px;"></div>
+                                    <KaptioTravel:CustomerActions contextId="{!$CurrentPage.parameters.Id}"/>
+                            </section>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </apex:define>
+    </apex:composition>
+</apex:page>

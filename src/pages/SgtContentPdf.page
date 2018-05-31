@@ -1,0 +1,54 @@
+<!--
+Name:  SgtContentPdf.page
+Copyright © 2018 Kaptio ehf.
+-->
+<apex:page controller="KaptioPdfTemplateController" standardStylesheets="false" sidebar="false" renderAs="pdf" applyHtmlTag="false" cache="false" showHeader="false" title="{!output.brand.Name} | {!output.content.Name}">
+    <html>
+        <head>
+            <apex:stylesheet value="{!$Page.KaptioPdfStylesheet}" />
+        </head>
+        
+        <body>
+            <!-- FOOTER -->
+            <div class="footer">
+                <apex:outputText value="Copyright © {!year(today())} {!output.brand.Name}. All rights reserved." />
+            </div>
+            
+            <!-- HEADER -->
+            <div class="header">
+                <div class="brand">
+                    <apex:image value="https://kaptio.com/wp-content/uploads/2017/07/kaptio_BLUE.png" title="{!output.brand.Name}" />
+                </div>
+                <div class="profile">
+                    <ul class="profile-info">
+                        <li>
+                            <strong>Contact:</strong> {!output.user.FirstName} {!output.user.LastName}
+                        </li>
+                        <li>
+                            <strong>Email: </strong>
+                            <apex:outputText value="{!output.user.Email}"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- BANNER -->
+            <div>
+                <apex:image styleclass="banner" value="{!output.content.KaptioTravel__BannerImage__c}" />
+            </div>
+
+            <!-- TITLE -->
+            <div>
+                <div class="title-header">
+                    <h1><apex:outputField value="{!output.itinerary.Name}" /></h1>
+                    <br/>
+                </div>
+            </div>
+
+            <!-- BODY -->
+            <div class="contentOutput ns-bootstrap">
+                <apex:outputText value="{!output.body}" escape="false" />
+            </div>
+        </body>
+    </html>
+</apex:page>
