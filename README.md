@@ -2,7 +2,7 @@
 
 [![Deploy to Salesforce](https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png)](https://githubsfdeploy.herokuapp.com?owner=Kaptio&repo=responsive-kaptio-pages-templates)
 
-TODO: Add description.
+Summary: The following files are Visualforce Page templates used in the Itenerary Content. This Document will outline the files included and the steps to deploy these files to your Salesforce Org. 
 
 ## What's included
 
