@@ -4,9 +4,9 @@ Copyright © 2018 Kaptio ehf.
 -->
 <apex:page controller="KaptioTemplateController" standardStylesheets="false" showHeader="false" sidebar="false" cache="false">
     
-    <!-- Include all JS and stylesheet docs in here  -->
+    <!-- Include all JS and stylesheet docs in here 
     <apex:include pageName="{!$Page.KaptioTemplateAssets}" />
-
+    --> 
     <!-- This is the only inline style as it contains user photo reference -->
     <style>
         .circular {
