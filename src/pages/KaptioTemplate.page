@@ -4,9 +4,9 @@ Copyright © 2018 Kaptio ehf.
 -->
 <apex:page controller="KaptioTemplateController" standardStylesheets="false" showHeader="false" sidebar="false" cache="false">
     
-    <!-- Include all JS and stylesheet docs in here 
-    <apex:include pageName="{!$Page.KaptioTemplateAssets}" />
-    --> 
+    <!-- Include all JS and stylesheet docs in here --> 
+    <apex:include pageName="KaptioTemplateAssets" />
+    
     <!-- This is the only inline style as it contains user photo reference -->
     <style>
         .circular {
@@ -42,9 +42,14 @@ Copyright © 2018 Kaptio ehf.
         </header>
 
         <!-- Content injection using <apex:define> -->
-        <main id="content">
-            <apex:insert name="Content" />
-        </main>
+        <div class="content-panel">
+            <div class="content aside clearfix">
+                <main id="content">
+                    <apex:insert name="Content" />
+                </main>
+            </div>
+        </div>
+
 
         <!-- Footer -->
         <footer id="main-footer">

@@ -2,16 +2,19 @@
 Name:  KaptioTemplateAssets.page
 Copyright © 2018 Kaptio ehf.
 -->
-<apex:page >
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false">
+
     <apex:includeScript value="{!URLFOR($Resource.KaptioTravel__assets, '/libs/jquery/1.11.2/jquery.min.js')}" />
-    <apex:stylesheet value="{!URLFOR($Resource.KaptioTravel__assets, '/libs/bootstrap/3.2.2/css/bootstrap_ns.css')}" />
+    <apex:stylesheet value="{!URLFOR($Resource.KaptioTravel__assets, '/libs/bootstrap/3.2.2/css/bootstrap_ns.css')}"/>
     <apex:stylesheet value="{!URLFOR($Resource.KaptioTravel__assets, 'libs/bootstrap/3.2.2/css/bootstrap-theme.css')}"/>
     <apex:includeScript value="{!URLFOR($Resource.KaptioTravel__assets, '/libs/bootstrap/3.2.2/js/bootstrap.min.js')}" />
+
     <apex:stylesheet value="{!URLFOR($Resource.KaptioTravel__assets2, '/libs/fontawesome/4.4.0/css/font-awesome.min.css')}" />
-    <apex:include pageName="{!$Page.KaptioTravel__OutputResources}" />
-    <apex:stylesheet value="{!$Page.KaptioTravel__KtCustomerStylesheet}" />
+    <apex:include pageName="KaptioTravel__OutputResources" />
+    <apex:stylesheet value="/apex/KaptioTravel__KtCustomerStylesheet" />
 
     <style>
+    
         .output-resources-ns .menu-header.navbar-fixed-top {
             <!--border-bottom: 40px solid #00509a;-->
         }
@@ -27,7 +30,7 @@ Copyright © 2018 Kaptio ehf.
             width: auto !important;
         }
 
-        main#content{
+        main {
             background:#fff;
         }
 
@@ -102,5 +105,17 @@ Copyright © 2018 Kaptio ehf.
             background-color: #fff;
         }
         .kt-agenda-listview-listing-dates .fa{margin-right: 3px;}
+        
+        .col-md-3 {
+            width: 30%;
+            margin-right: 2%;
+            border-radius: 3px;
+            font-weight: normal;
+            padding: 0 25px 25px;
+            font-family: arial;
+            content-align: right;
+        }
+        
+        
     </style>
 </apex:page>
