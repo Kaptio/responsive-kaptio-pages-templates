@@ -17,7 +17,7 @@ Copyright © 2018 Kaptio ehf.
             <!-- HEADER -->
             <div class="header">
                 <div class="brand">
-                    <apex:image value="https://kaptio.com/wp-content/uploads/2017/07/kaptio_BLUE.png" title="{!output.brand.Name}" />
+                    <apex:image value="https://www.bunniktours.com.au/extension/bunniktours/design/bunniktours_design/images/logo-bunnik-tours-n.png" title="{!output.brand.Name}" />
                 </div>
                 <div class="profile">
                     <ul class="profile-info">
@@ -33,9 +33,11 @@ Copyright © 2018 Kaptio ehf.
             </div>
             
             <!-- BANNER -->
+            <apex:Outputpanel layout="none" rendered="{!output.content.KaptioTravel__BannerImage__c != ''}">
             <div>
-                <apex:image styleclass="banner" value="{!output.content.KaptioTravel__BannerImage__c}" />
+                <apex:image styleclass="banner" value="{!output.content.KaptioTravel__BannerImage__r.KaptioTravel__S3_Url__c}" />
             </div>
+            </apex:Outputpanel>
 
             <!-- TITLE -->
             <div>

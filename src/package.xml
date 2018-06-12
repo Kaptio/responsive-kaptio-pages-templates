@@ -6,7 +6,11 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
+        <members>KaptioPdfStylesheet</members>
+        <members>KaptioTemplate</members>
+        <members>KaptioTemplateAssets</members>
+        <members>SgtContent</members>
+        <members>SgtContentPdf</members>
         <name>ApexPage</name>
     </types>
     <version>36.0</version>
