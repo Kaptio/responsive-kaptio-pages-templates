@@ -2,6 +2,7 @@
 Name:  ExampleContent.page
 Copyright © 2018 Kaptio ehf.
 -->
+<!--  -->
 <apex:page controller="KaptioTemplateController" standardStylesheets="false" showHeader="false" sidebar="false">
 
     <style>

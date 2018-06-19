@@ -1,0 +1,415 @@
+<!--
+Name:  KtStylesheet.page
+Copyright © 2015  Kaptio ehf.
+======================================================
+======================================================
+Purpose:
+-------
+Stylesheet for customer outputs
+======================================================
+======================================================
+History
+-------
+Ver. Author        Date        Detail
+1.0  Ragnar   2015-06-25  Page creation.
+-->
+<apex:page contentType="text/css">
+
+    body{
+        padding: 0 !important;
+    }
+    
+    li{
+        max-width:100%;
+    }
+    
+    .hero-carousel .carousel-content{
+        height: auto !important;
+    }
+
+    .fancybox-opened{
+        z-index: 99999999 !important;
+    }
+    
+    header.masthead {
+      min-height: 80px;
+    }
+
+    .nav-item {
+      min-height: 10px;
+    }
+
+    .air {
+        padding: 1.5em 0 0 0;
+    }
+
+    .circular {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      background-size: cover;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+      -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+      -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+      background-size: cover !important;
+      position: relative;
+      float: right;
+    }
+
+    .user-info{
+      float: left;
+      margin: 8px 10px;
+      font-size: 0.9em;
+    }
+
+    .carousel-content{
+        margin-left: -30px;
+    }
+
+    .hero-carousel{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .l-container{
+        max-width: 1250px;
+    }
+
+
+    .btn-group{
+        text-align: center;
+    }
+
+    .btn-group > button {
+        margin: 7px 0;
+    }
+.btn-default{ border:none; }
+.btn-link{
+
+    background: none;
+    box-shadow: none;
+    color: #00f;
+    font-weight: NORMAL;
+    text-transform: none;
+    }
+
+    /*Item Blocks*/
+
+    .item-block-wrapper{
+        margin: 50px 0;
+        border-top: 1px solid #ddd;
+        padding: 20px 0;
+    }
+
+    .item-block-wrapper .item-block-title{
+        margin-bottom:5px !important;
+    }
+
+    .item-block-wrapper .item-block-subtitle{
+        display: block !important;
+        margin-left:3px !important;
+    }
+
+    .item-block-wrapper .item-location{
+        top:10px !important;
+    }
+
+    .item-block-actions > a{
+        background-color: #fff !important;
+        background-image: -webkit-linear-gradient(top, #fff 30%, #f2f2f2 100%) !important;
+        background-image: linear-gradient(to bottom, #fff 30%, #f2f2f2 100%) !important;
+        border: 1px solid #dbdbd8;
+        color: #3778a0 !important;
+        text-transform: lowercase;
+        font-weight: normal;
+        line-height: 2em;
+        padding: 7px;
+    }
+
+    .item-block-actions > a:hover{
+        background-position: 0;
+    }
+
+    .item-block-actions .btn, .btn:link, .btn:visited {
+        color: ##33373b !important;
+    }
+
+    .ktexternal .item-block-wrapper.item-block-small .item-block-action-more{
+        display: inline-block !important;
+    }
+
+    .ktexternal .item-block-wrapper.item-block-large .item-block-action-less{
+        width: 75px;
+        display:inline-block !important;
+    }
+
+    .panel-body > strong{
+        display: block;
+    }
+
+    .print-itinerary{
+        margin-top:18px;
+    }
+    .print-itinerary > a {
+        color: #3778a0;
+    }
+    .print-itinerary > a:hover {
+        color: #000000
+    }
+
+    .spinner {
+        display: inline-block;
+        opacity: 0;
+        max-width: 0;
+
+        -webkit-transition: opacity 0.25s, max-width 0.45s; 
+        -moz-transition: opacity 0.25s, max-width 0.45s;
+        -o-transition: opacity 0.25s, max-width 0.45s;
+        transition: opacity 0.25s, max-width 0.45s; /* Duration fixed since we animate additional hidden width */
+    }
+
+    .has-spinner.active {
+        cursor:progress;
+    }
+
+    .has-spinner.active .spinner {
+        opacity: 1;
+        max-width: 50px; /* More than it will ever come, notice that this affects on animation duration */
+    }
+
+
+    button.mt {
+        width: 75% !important;
+        min-width: 165px !important;
+        max-width: 200px !important;
+        margin: 5px !important;
+    }
+    button.btn-warning, button.btn-danger{
+        text-shadow: inherit;
+    }
+
+    .cc-modal-comment-body > textarea {
+        font-family: 'Museo Sans Rounded', Helvetica, Arial, sans-serif;
+        color: rgb(51, 55, 59);
+    }
+
+    h6.basket-item-detail-duration{
+        text-transform: uppercase;
+    }
+
+    .ktexternal .cc-modal-comment-body pre{white-space: pre-line;}
+
+    .item-location > a { color: #3778a0;}
+    .print-itinerary > a:hover { color: black; }
+
+    .summary-heading-row{
+        border-bottom: 1px solid #ddd;
+    }
+    h3.basket-title{
+        margin-bottom: 10px;
+    }
+
+    .statement-table-container td:last-child{
+        width: 200px !important;
+    }
+
+    .masthead-item a img.screen{display: block;}
+    .masthead-item a img.print{display: none;}
+
+
+
+    .our-partners .iagto-footer-logo {
+        background-position: -35px -106px;
+        width: 118px;
+    }
+    .our-partners li {
+        background: url("http://intl.golfbreaks.com/Resources/img/Layout/footer-sprite.png");
+        display: inline-block;
+        height: 60px;
+        margin-top: 20px;
+        margin-right: 35px;
+    }
+    .list-inline>li {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .ir {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: 0;
+        direction: ltr;
+        display: block;
+        overflow: hidden;
+        text-align: left;
+        text-indent: -9999em;
+    }
+
+    .our-partners .investors-in-people-footer-logo {
+        background-position: -194px -106px;
+       width: 178px;
+    }
+
+    .our-partners .drf-footer-logo {
+        background-position: -417px -106px;
+        width: 243px;
+    }
+    .our-partners .rejse-footer-logo {
+        background-position: -692px -106px;
+        width: 193px;
+    }
+
+    .centered > p:first-child {
+        text-align: center !important; 
+    }
+
+
+
+    @media only screen and (max-width: 1027px) {
+        .fancybox-nav span {
+         visibility: visible;
+         opacity: 0.5;
+        }
+    }
+    @media only screen and (max-width: 51.2em) {
+        .ktexternal .cc-modal{
+            width: 98%;
+            left:1%;
+            top:1%;
+            margin-left:0;
+            max-height: 98%;
+            overflow: scroll;
+        }
+
+        .hero-carousel{
+            min-width: 100%;
+        width: 100%;
+        }
+        .hero-carousel .carousel-content{width:100%; margin:0; height:auto;}
+        .cc-modal-body{max-height: 100%}
+        .ktexternal .item-block-wrapper.item-block-small.item-block-with-booking-summary .item-content-html,
+        .ktexternal .item-block-wrapper.item-block-large.item-block-with-booking-summary .item-content-html{margin:0;}
+
+        .ktexternal .cc-modal-comment-photo{ left:0; }
+        .ktexternal .cc-modal-comment-photo img{width:35px;}
+        .ktexternal .cc-modal-comment-author{margin-left:50px;}
+        .ktexternal .cc-modal-comment-body{margin-left:0;}
+        .ktexternal .cc-modal-new-comment .cc-modal-comment-body{margin-top:25px;}
+
+        .ktexternal span.cc-modal-comment-created span{display: block;}
+        .ktexternal span.cc-modal-comment-created span.cc-modal-comment-created-from-now{ display: none; }
+        .ktexternal span.cc-modal-comment-created span.cc-modal-comment-customer-action{
+            display: block;
+            text-transform: capitalize;
+        }
+
+        .ktexternal .cc-modal-comment-actions {
+            width: 90%;
+            margin-left: 0;
+        }
+
+        .ktexternal .sticky-sidebar .g-span10{
+            width: 41.05263158%;
+            display: inline-block;
+            float: left;
+        }
+        .ktexternal .sticky-sidebar .g-span14{
+            width: 57.89473684%;
+            display: inline-block;
+            float: left;
+        }
+
+        .kt-repeat > table > td > strong {
+            display: block;
+        }
+        
+        .kt-repeat > table > th {
+            width:50%;
+        }
+
+    }
+
+    @media print {
+
+        body{ font-family: Helvetica, Arial, sans-serif !important; }
+        thead {display: table-header-group;}
+
+        .masthead-item a img.screen{display: none;}
+        .masthead-item a img.print{display: block;}
+
+        .ns-bootstrap h1{ font-size: 2em;}
+        .ns-bootstrap h2{ font-size: 1.5em;}
+        .ns-bootstrap h3{ font-size: 1.17em;}
+        .ns-bootstrap h4{ font-size: 100%;}
+        .ns-bootstrap h5{ font-size: 0.83em;}
+        .ns-bootstrap h6{ font-size: 0.67em;}
+
+        .ktexternal .masthead-item a[href]:after,
+        a[class*="fancybox"][href]:after,
+        {
+            content: "";
+        }
+        .footer,
+        .circular,
+        .item-block-actions,
+        .item-block-wrapper.item-block-small .item-content-html-truncated,
+        .item-location,
+        button{display:none !important;}
+
+        .item-block-wrapper .item-content-html-full,
+        .item-block-wrapper .item-content-html-truncated,
+        .item-block-wrapper.item-block-small .video-images-gallery{display: block !important;}
+
+        .header.page{
+            border-bottom: 1px solid #BBB;
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .content-logo{float: left;}
+        .content-logo img {
+            max-width: 100px;
+        }
+        .user-info {
+            float: right;
+            margin-top: 5px;
+        }
+
+        .user-info p{ margin: 0;  font-size: 12px; }
+        .user-info h2{ margin: 0;  font-size: 15px; }
+        .user-info a{ margin: 0;  font-size: 14px; color:#000; text-decoration: none; }
+
+        .content{margin-top: 0; clear:both;}
+
+        .content.tour .sidebar {
+            float: left;
+            padding: 0 0 20px;
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .content.tour .sidebar .medium-6{
+            width: 50%;
+            float: left;
+            padding: 0 0 5px;
+            margin: 0 0 5px;
+            border-bottom: 1px solid #DDD;
+        }
+
+        .ktexternal .item-block-wrapper .item-block-title,
+        .ktexternal .item-block-wrapper .item-block-subtitle {
+            display: block;
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+
+        .item-block-wrapper {
+            page-break-after: always;
+        }
+        
+        
+    }
+</apex:page>

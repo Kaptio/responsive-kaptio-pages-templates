@@ -3,12 +3,14 @@
     <types>
         <members>KaptioPdfTemplateController</members>
         <members>KaptioTemplateController</members>
+        <members>KtTemplateController</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>KaptioPdfStylesheet</members>
         <members>KaptioTemplate</members>
         <members>KaptioTemplateAssets</members>
+        <members>KtStylesheet</members>
         <members>SgtContent</members>
         <members>SgtContentPdf</members>
         <name>ApexPage</name>
