@@ -18,9 +18,9 @@ Summary: The following files are Visualforce Page templates used in the Itenerar
 
 * KaptioTemplateAssets.page - Page containing links to nessesary Javascrip and JQuery files
 
-* SgtContent.page - Customized content Page
+* Kaptio-Content.page -  content page to place custom Org content in
 
-* SgtContentPdf.page - Customized  content Page designed for PDF
+* Kaptio-ContentPdf.page - Customized  content Page designed for PDF
 
 ## How to use
 * Click Deploy to Salesforce

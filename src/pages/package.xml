@@ -9,8 +9,8 @@
         <members>KaptioPdfStylesheet</members>
         <members>KaptioTemplate</members>
         <members>KaptioTemplateAssets</members>
-        <members>SgtContent</members>
-        <members>SgtContentPdf</members>
+        <members>Kaptio-Content</members>
+        <members>Kaptio-ContentPdf</members>
         <name>ApexPage</name>
     </types>
     <version>36.0</version>
