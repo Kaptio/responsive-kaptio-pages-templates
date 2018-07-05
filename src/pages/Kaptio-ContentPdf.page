@@ -1,5 +1,5 @@
 <!--
-Name:  SgtContentPdf.page
+Name:  ContentPdf.page
 Copyright © 2018 Kaptio ehf.
 -->
 <apex:page controller="KaptioPdfTemplateController" standardStylesheets="false" sidebar="false" renderAs="pdf" applyHtmlTag="false" cache="false" showHeader="false" title="{!output.brand.Name} | {!output.content.Name}">
@@ -17,7 +17,7 @@ Copyright © 2018 Kaptio ehf.
             <!-- HEADER -->
             <div class="header">
                 <div class="brand">
-                    <apex:image value="https://www.bunniktours.com.au/extension/bunniktours/design/bunniktours_design/images/logo-bunnik-tours-n.png" title="{!output.brand.Name}" />
+                    <apex:image value="" title="{!output.brand.Name}" />
                 </div>
                 <div class="profile">
                     <ul class="profile-info">
